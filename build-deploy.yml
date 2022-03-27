@@ -27,18 +27,18 @@ stages:
   displayName: Deployment-ADF
   jobs:
   - job: GenerateArtifacts
-  steps:
-  - task: AzureResourceManagerTemplateDeployment@3
-    displayName: 'ARM Template deployment: Resource Group scope'
-    inputs:
-      deploymentScope: 'Resource Group'
-      azureResourceManagerConnection: finalservice
-      subscriptionId: 'be9a6686-cc74-4a64-aed5-f6c481deec00'
-      action: 'Create Or Update Resource Group'
-      resourceGroupName: adfkt
-      location: WestEurope 
-      templateLocation: 'Linked artifact'
-      csmFile: $(Agent.BuildDirectory)/ADF/ARMTemplateForFactory.json'
-      csmParametersFile: '$(Agent.BuildDirectory)/ADF/QA-ARMTemplateParametersForFactory.json'            
-      enabled: false 
-      deploymentMode: 'Incremental'
+    steps:
+    - task: AzureResourceManagerTemplateDeployment@3
+      displayName: 'ARM Template deployment: Resource Group scope'
+      inputs:
+        deploymentScope: 'Resource Group'
+        azureResourceManagerConnection: finalservice
+        subscriptionId: 'be9a6686-cc74-4a64-aed5-f6c481deec00'
+        action: 'Create Or Update Resource Group'
+        resourceGroupName: adfkt
+        location: WestEurope 
+        templateLocation: 'Linked artifact'
+        csmFile: $(Agent.BuildDirectory)/ADF/ARMTemplateForFactory.json'
+        csmParametersFile: '$(Agent.BuildDirectory)/ADF/QA-ARMTemplateParametersForFactory.json'            
+        enabled: false 
+        deploymentMode: 'Incremental'
