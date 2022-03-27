@@ -37,7 +37,7 @@ stages:
         action: 'Create Or Update Resource Group'
         resourceGroupName: adfkt
         location: WestEurope
-        csmFile: '$(Agent.BuildDirectory)/ADF/ARMTemplateForFactory.json'
-        csmParametersFile: '$(Agent.BuildDirectory)/ADF/QA-ARMTemplateParametersForFactory.json'            
+        csmFile: 'ajaytest01/ARMTemplateForFactory.json'
+        csmParametersFile: 'ajaytest01/QA-ARMTemplateParametersForFactory.json'            
         enabled: false 
         deploymentMode: 'Incremental'
