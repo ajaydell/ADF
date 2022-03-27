@@ -19,7 +19,7 @@ stages:
   - job: GenerateArtifacts
     steps:
     - task: PublishPipelineArtifact@1
-      displayName: Publish-Scripts
+      displayName: 'Publish Pipeline Artifact'
       inputs:
-        targetPath: ./ajaytest01 
-        artifactName: ADF
+        targetPath: ajaytest01
+        artifact: ADF
