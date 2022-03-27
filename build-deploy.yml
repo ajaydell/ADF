@@ -1,0 +1,24 @@
+name: 'datafactory_$(SourceBranchName)_$(Date:yyyyMMdd)_$(Rev:.r)'
+trigger:
+  batch: true
+  branches:
+    include:
+      - refs/heads/adf_publish
+    exclude:
+      - master
+      - release
+      - develop
+pr: none
+pool:
+  vmImage: 'windows-latest'
+stages:
+- stage: Build
+  displayName: Build
+  jobs:
+  - job: GenerateArtifacts
+  steps:
+  - task: PublishPipelineArtifact@1
+    displayName: Publish-Scripts
+    inputs:
+      targetPath: ./ajaytest01 
+      artifactName: ADF
