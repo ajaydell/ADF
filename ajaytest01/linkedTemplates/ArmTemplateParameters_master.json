@@ -5,6 +5,12 @@
 		"factoryName": {
 			"value": "ajaytest01"
 		},
+		"dataFactory_properties_globalParameters_test_value": {
+			"value": "bobba"
+		},
+		"dataFactory_location": {
+			"value": "westeurope"
+		},
 		"containerUri": {
 			"value": ""
 		},

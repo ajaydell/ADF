@@ -6,12 +6,35 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "ajaytest01"
+		},
+		"dataFactory_properties_globalParameters_test_value": {
+			"type": "string",
+			"defaultValue": "bobba"
+		},
+		"dataFactory_location": {
+			"type": "string",
+			"defaultValue": "westeurope"
 		}
 	},
 	"variables": {
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[parameters('factoryName')]",
+			"type": "Microsoft.DataFactory/factories",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"globalParameters": {
+					"test": {
+						"type": "string",
+						"value": "[parameters('dataFactory_properties_globalParameters_test_value')]"
+					}
+				}
+			},
+			"dependsOn": [],
+			"location": "[parameters('dataFactory_location')]"
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/Bobba')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
