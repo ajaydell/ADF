@@ -9,6 +9,7 @@ trigger:
       - release
       - develop
 pr: none
+
 pool:
   vmImage: 'windows-latest'
 stages:
@@ -16,9 +17,9 @@ stages:
   displayName: Build
   jobs:
   - job: GenerateArtifacts
-  steps:
-  - task: PublishPipelineArtifact@1
-    displayName: Publish-Scripts
-    inputs:
-      targetPath: ./ajaytest01 
-      artifactName: ADF
+    steps:
+    - task: PublishPipelineArtifact@1
+      displayName: Publish-Scripts
+      inputs:
+        targetPath: ./ajaytest01 
+        artifactName: ADF
