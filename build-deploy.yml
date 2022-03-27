@@ -38,7 +38,7 @@ stages:
         resourceGroupName: adfkt
         location: WestEurope 
         templateLocation: 'Linked artifact'
-        csmFile: $(Agent.BuildDirectory)/ADF/ARMTemplateForFactory.json'
+        csmFile: '$(Agent.BuildDirectory)/ADF/ARMTemplateForFactory.json'
         csmParametersFile: '$(Agent.BuildDirectory)/ADF/QA-ARMTemplateParametersForFactory.json'            
         enabled: false 
         deploymentMode: 'Incremental'
