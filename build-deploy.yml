@@ -36,8 +36,7 @@ stages:
         subscriptionId: 'be9a6686-cc74-4a64-aed5-f6c481deec00'
         action: 'Create Or Update Resource Group'
         resourceGroupName: adfkt
-        location: WestEurope 
-        templateLocation: 'Linked artifact'
+        location: WestEurope
         csmFile: '$(Agent.BuildDirectory)/ADF/ARMTemplateForFactory.json'
         csmParametersFile: '$(Agent.BuildDirectory)/ADF/QA-ARMTemplateParametersForFactory.json'            
         enabled: false 
