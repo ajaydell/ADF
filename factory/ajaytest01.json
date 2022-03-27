@@ -1,0 +1,12 @@
+{
+	"name": "ajaytest01",
+	"properties": {
+		"globalParameters": {
+			"test": {
+				"type": "string",
+				"value": "bobba"
+			}
+		}
+	},
+	"location": "westeurope"
+}
