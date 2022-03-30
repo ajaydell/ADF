@@ -1,4 +1,4 @@
 type,name,path,value
 linkedService,AzureBlobStorage,typeProperties.serviceEndpoint,"https://adfrestapi2.blob.core.windows.net"
-factory,ENV,"$.properties.globalParameters.'ENV'.value","dev"
-factory,deployment,"$.properties.globalParameters.'deployment'.value","dev"
+factory,ADFDEVHIMA01,globalParameters.ENV.value,"dev"
+factory,ADFDEVHIMA01,"$.properties.globalParameters.'deployment'.value","dev"
