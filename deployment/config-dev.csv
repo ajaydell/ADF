@@ -1,3 +1,2 @@
 type,name,path,value
 linkedService,AzureBlobStorage,typeProperties.serviceEndpoint,"https://adfrestapi2.blob.core.windows.net"
-factory,ADFDEVHIMA01,"$.properties.globalParameters.'deployment'.value","ajay"
