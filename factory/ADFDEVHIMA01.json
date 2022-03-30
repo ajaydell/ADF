@@ -8,7 +8,7 @@
 			},
 			"deployment": {
 				"type": "string",
-				"value": "dev"
+				"value": "ajay"
 			}
 		}
 	},
