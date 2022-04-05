@@ -1,0 +1,14 @@
+{
+	"ENV": {
+		"type": "string",
+		"value": "dev"
+	},
+	"deployment": {
+		"type": "string",
+		"value": "ajay"
+	},
+	"test": {
+		"type": "string",
+		"value": "adf"
+	}
+}
