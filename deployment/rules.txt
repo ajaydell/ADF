@@ -1,2 +1,1 @@
-pipeline.*
-+*.mani.json
++pipeline.mani.*
