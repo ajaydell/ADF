@@ -1,1 +1,1 @@
--pipeline.mani.*
+-pipeline.Bobba*
